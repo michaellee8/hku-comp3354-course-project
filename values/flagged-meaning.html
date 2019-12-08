@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body>
+    <select class="form-control" name="status">
+      <option value="0"
+      <?php if ($this->user['flagged'] == 0) { ?>selected="selected"<?php } ?>
+      ><?php _e('正常'); ?></option>
+      <option value="-1"
+      <?php if ($this->user['flagged'] == -1) { ?>selected="selected"<?php } ?>
+      ><?php _e('观察'); ?></option>
+      <option value="1"
+      <?php if ($this->user['flagged'] == 1) { ?>selected="selected"<?php } ?>
+      ><?php _e('禁止登录'); ?></option>
+      <option value="2"
+      <?php if ($this->user['flagged'] == 2) { ?>selected="selected"<?php } ?>
+      ><?php _e('禁止登录 + 隐藏全部发言'); ?></option>
+      <option value="3"
+      <?php if ($this->user['flagged'] == 3) { ?>selected="selected"<?php } ?>
+      ><?php _e('禁止登录 + 替换全部发言'); ?></option>
+    </select>
+  </body>
+</html>
